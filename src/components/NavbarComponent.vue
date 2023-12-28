@@ -11,14 +11,14 @@ const isOpenNav = ref(false);
  
 <template>
     <!-- nav bar -->
-    <nav class="flex justify-between text-xl mt-2 mx-5 lg:mx-20 lg:my-8">
+    <nav class="flex justify-between text-xl my-2 mx-5 lg:mx-20">
         <button @click="isOpenNav = true">
             <NavIconVue class="my-auto lg:hidden" />
         </button>
         <!-- logo -->
         <img :src="logo" alt="logo" class="my-auto hidden lg:block">
         <p class="text-xl text-primary block lg:hidden">Tech Heim</p>
-        <div class="hidden lg:flex gap-16 my-auto   ">
+        <div class="hidden lg:flex gap-16 my-auto">
             <button>Home</button>
             <button>Products</button>
             <button>Blog</button>
