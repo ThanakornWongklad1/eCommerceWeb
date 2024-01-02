@@ -11,7 +11,7 @@ const isOpenNav = ref(false);
  
 <template>
     <!-- nav bar -->
-    <nav class="flex justify-between text-xl my-2 mx-5 lg:mx-20">
+    <nav id="navbar" class="flex justify-between text-xl my-2 mx-5 lg:mx-20">
         <button @click="isOpenNav = true">
             <NavIconVue class="my-auto lg:hidden" />
         </button>

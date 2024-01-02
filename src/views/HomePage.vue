@@ -3,7 +3,7 @@ import NavbarComponent from '../components/NavbarComponent.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css/bundle';
 import { ref } from 'vue';
-import Accessorires from '../assets/img/resource/Accessories.png';
+import Accessories from '../assets/img/resource/Accessories.png';
 import Camera from '../assets/img/resource/Camera.png';
 import Laptop from '../assets/img/resource/Laptop.png';
 import SmartPhone from '../assets/img/resource/SmartPhone.png';
@@ -11,11 +11,12 @@ import Gaming from '../assets/img/resource/Gaming.png';
 import SmartWatch from '../assets/img/resource/SmartWatch.png';
 
 import ProductShowComponent from '@/components/ProductShowComponent.vue';
+import FooterComponent from '../components/FooterComponent.vue'
 
 const images = [
     {
-        url: Accessorires,
-        name: 'Accessorires'
+        url: Accessories,
+        name: 'Accessories'
     },
     {
         url: Camera,
@@ -138,7 +139,72 @@ const newProducts = [
     </div>
     <!-- new products -->
     <ProductShowComponent title="New Products" :products="newProducts" />
-    <ProductShowComponent title="Best Sellers" :products="newProducts" />
+
+    <!-- ads -->
+    <div class="mt-6 lg:mt-20 flex-col lg:flex lg:flex-row lg:justify-center mx-5 lg:mx-20">
+        <div class="w-full lg:w-6/12 lg:mx-7 bg-gradient-to-tl from-linear-green to-linear-blue 
+        flex justify-around rounded-lg lg:rounded-lg">
+            <div class="ml-3 lg:ml-10 mt-3 lg:mt-5 w-5/12 grid content-between lg:content-around">
+                <div class="font-semibold text-lg lg:text-3xl">Iphone <span class="text-white">15 Series</span></div>
+                <img src="../assets/img/iphone15.png" alt="iphone15" class="w-36 lg:w-80">
+            </div>
+            <div class="my-3 lg:mt-16 w-7/12">
+                <div class="flex justify-center">
+                    <div class="border border-black rounded-md mx-1 lg:mx-2 text-center w-8 lg:w-16 text-xs lg:text-xl">
+                        <div class="font-semibold">8</div>
+                        <div>Days</div>
+                    </div>
+                    <div class="border border-black rounded-md mx-1 lg:mx-2 text-center w-8 lg:w-16 text-xs lg:text-xl">
+                        <div class="font-semibold">8</div>
+                        <div>hour</div>
+                    </div>
+                    <div class="border border-black rounded-md mx-1 lg:mx-2 text-center w-8 lg:w-16 text-xs lg:text-xl">
+                        <div class="font-semibold">8</div>
+                        <div>min</div>
+                    </div>
+                    <div class="border border-black rounded-md mx-1 lg:mx-2 text-center w-8 lg:w-16 text-xs lg:text-xl">
+                        <div class="font-semibold">8</div>
+                        <div>sec</div>
+                    </div>
+                </div>
+                <div class="flex justify-center font-semibold text-xs lg:text-2xl mt-5 mx-3">It feel good to be the first
+                </div>
+                <div class="flex justify-center font-thin text-xs lg:text-xl mx-3 lg:mx-20">
+                    Get ready for the future of smartphones.Experience innovation like never
+                    before. Stay tuned for the big iPhone 15 sale.
+                </div>
+                <div class="flex justify-center">
+                    <button
+                        class="bg-primary text-white rounded w-full lg:w-auto mx-5 p-2 px-5 mt-2 lg:my-5 font-light text-sm lg:text-xl">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-5 lg:mt-0 lg:w-5/12 lg:mx-7 bg-primary-600 rounded-lg relative overflow-hidden">
+            <div class="bg-secondary-300 absolute h-16 lg:h-40 w-20 lg:w-40 rounded-br-full"></div>
+            <div class="bg-secondary-300 absolute h-150 w-150 rounded-t-full top-20 lg:top-32 -left-96 lg:-left-44 z-0">
+            </div>
+            <div class="flex-col text-secondary-300 font-semibold text-lg lg:text-3xl text-center pt-3 lg:pt-10">
+                Play Station 5
+            </div>
+            <div class="flex justify-between">
+                <div class="text-primary-600 text-md lg:text-2xl mx-5 lg:mx-28 mt-16 lg:mt-40 z-10">
+                    Digital Edition + 2TB
+                </div>
+                <img src="../assets/img/ps5.png" alt="PS5" class="w-32 lg:w-64 mt-3 mr-5 z-10">
+            </div>
+            <button
+                class="bg-primary relative text-white rounded-lg lg:w-auto mx-5 lg:mx-32 py-2 px-5 my-5 lg:my-5 font-light text-sm lg:text-xl">
+                Buy Now
+            </button>
+        </div>
+    </div>
+
+    <ProductShowComponent title="Best Sellers" :products="newProducts" class="mb-5 lg:mb-20" />
+
+    <!-- footer -->
+    <FooterComponent />
 </template>
  
 <style scoped></style>
